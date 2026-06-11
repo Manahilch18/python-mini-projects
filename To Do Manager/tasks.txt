@@ -1,0 +1,4 @@
+build mini python project|Pending|high
+check student assiments|Completed|medium
+outing with friend|Pending|low
+traveling|Pending|Low
