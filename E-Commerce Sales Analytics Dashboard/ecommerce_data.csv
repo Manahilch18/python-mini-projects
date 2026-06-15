@@ -1,0 +1,7 @@
+Order_ID,Order_Date,Customer,Product,Quantity,Sales
+1,2025-01-10,Ali,Laptop,1,800
+2,2025-01-15,Sara,Mouse,2,40
+3,2025-02-05,Ahmed,Keyboard,1,60
+4,2025-02-10,Ali,Monitor,1,200
+5,2025-03-01,Zain,Laptop,1,850
+6,2025-03-12,Sara,Mouse,3,60
