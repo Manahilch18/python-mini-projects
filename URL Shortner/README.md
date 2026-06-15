@@ -43,7 +43,9 @@ A lightweight **command-line URL shortener** built with pure Python. Generate sh
 | 4 | Display the total count of stored URLs |
 | 5 | Delete a URL entry by its short code |
 | 6 | Search all stored URLs by a keyword |
-| 7 | Exit the program |
+| 7 | Track click count per short URL
+| 8 | Add expiry dates for short links
+| 79| Exit the program |
 
 ---
 
@@ -121,8 +123,6 @@ Each line follows the format: `short_code,original_url`
 
 ## 🔮 Future Improvements
 
-- [ ] Track click count per short URL
-- [ ] Add expiry dates for short links
 - [ ] Custom short codes chosen by the user
 - [ ] Store data in SQLite for better scalability
 - [ ] Web interface using Flask or Streamlit
