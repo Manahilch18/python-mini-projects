@@ -234,7 +234,8 @@ Through this project I learned:
 
  
 ```text
- ![alt text](image.png)
+ <img width="2304" height="1624" alt="image" src="https://github.com/user-attachments/assets/cf07a831-27dc-4f1c-8856-6ae50f741253" />
+
 ```
 
 ---
