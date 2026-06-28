@@ -26,7 +26,10 @@ A simple and interactive **command-line expense tracker** built with pure Python
 2. View Expenses
 3. Show Expenses by Category
 4. Show Total
-5. Exit
+6. Save Expenses
+7. Load Expenses
+8. Filter by Category
+9. Exit
 ```
 
 | Option | Description |
@@ -35,7 +38,10 @@ A simple and interactive **command-line expense tracker** built with pure Python
 | 2 | View all recorded expenses |
 | 3 | Update/assign categories to existing expenses |
 | 4 | Show the total of all expenses |
-| 5 | Exit the program |
+| 6 | Save expenses to a file (JSON or CSV) |
+| 7 | Load previously saved expenses from file |
+| 8 | Filter expenses by a specific category |
+| 9 | Exit the program |
 
 ---
 
@@ -89,8 +95,8 @@ Total expenses: $3.5
 
 ## 🔮 Future Improvements
 
-- [ ] Save and load expenses from a file (CSV or JSON)
-- [ ] Filter expenses by category
+- [ ] Save and load expenses from a file (CSV or JSON)(Done)
+- [ ] Filter expenses by category(Done)
 - [ ] Set a monthly budget and track overspending
 - [ ] Add date/time to each expense
 - [ ] Build a GUI version with Tkinter or Streamlit

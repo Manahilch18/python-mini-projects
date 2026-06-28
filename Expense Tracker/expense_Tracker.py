@@ -1,3 +1,38 @@
+import json
+import csv
+import os
+
+def save_expenses(expenses, filename="expenses.json"):
+    with open(filename, "w") as f:
+        json.dump(expenses, f, indent=4)
+    print(f"Expenses saved to {filename}")
+
+def load_expenses(filename="expenses.json"):
+    if os.path.exists(filename):
+        with open(filename, "r") as f:
+            return json.load(f)
+    return []
+
+def save_expenses_csv(expenses, filename="expenses.csv"):
+    with open(filename, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["name", "amount", "category"])
+        writer.writeheader()
+        writer.writerows(expenses)
+    print(f"Expenses saved to {filename}")
+def filter_by_category(expenses):
+    if not expenses:
+        print("No expenses found.")
+        return
+    category = input("Enter category to filter: ").lower()
+    filtered = [e for e in expenses if e['category'].lower() == category]
+    if not filtered:
+        print(f"No expenses found in '{category}' category.")
+    else:
+        print(f"\n--- {category.upper()} Expenses ---")
+        for e in filtered:
+            print(f"{e['name']}: ${e['amount']}")
+        total = sum(e['amount'] for e in filtered)
+        print(f"Category Total: ${total}")
 expenses = []
 while True:
     print("\n===== Expense Tracker =====")
@@ -5,7 +40,10 @@ while True:
     print("2. View Expenses")
     print("3. Show Expenses by Category")
     print("4. Show Total")
-    print("5. Exit\n")
+    print("6. Save Expenses")
+    print("7. Load Expenses")
+    print("8. Filter by Category")
+    print("9. Exit\n")
     choice = input("Choose an option: ")
     if choice == "1":
         name = input("Enter expense name: ")
@@ -35,7 +73,14 @@ while True:
     elif choice == "4":
         total = sum(expense['amount'] for expense in expenses)
         print(f"Total expenses: ${total}")
-    elif choice == "5":
+    elif choice == "6":
+        save_expenses(expenses)
+    elif choice == "7":
+        expenses = load_expenses()
+        print(f"{len(expenses)} expenses loaded!")
+    elif choice == "8":
+        filter_by_category(expenses)
+    elif choice == "9":
         print("Goodbye!")
         break
     else:
